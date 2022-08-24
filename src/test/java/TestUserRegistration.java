@@ -19,6 +19,8 @@ public class TestUserRegistration {
     @Before
     public void setUp() {
         Configuration.browserSize = "1366x768";
+        Configuration.browser = "chrome";
+//        Configuration.browser = "firefox";
         open(BASE_URL);
     }
 

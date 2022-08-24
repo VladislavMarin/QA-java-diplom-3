@@ -19,6 +19,8 @@ public class TestMainPage {
     @Before
     public void setUp() {
         Configuration.browserSize = "1366x768";
+        Configuration.browser = "chrome";
+//        Configuration.browser = "firefox";
         open(BASE_URL);
         userRegistration(name, email, password);
         loginUser(email, password);
@@ -49,9 +51,5 @@ public class TestMainPage {
         MainPagePO.constructorBtnInHeader.click();
 
         ConstructorPagePO.ConstructorLogoPage.shouldHave(Condition.exactText("Соберите бургер"));
-    }
-
-    @Test
-    public void name() {
     }
 }

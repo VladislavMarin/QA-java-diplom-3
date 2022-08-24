@@ -4,7 +4,6 @@ import com.codeborne.selenide.SelenideElement;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import page_object.AuthPagePO;
 import page_object.ConstructorPagePO;
 
 import static com.codeborne.selenide.Selenide.actions;
@@ -18,8 +17,9 @@ public class TestConstructor {
 
     @Before
     public void setUp() {
-
         Configuration.browserSize = "1366x768";
+        Configuration.browser = "chrome";
+//        Configuration.browser = "firefox";
         open(BASE_URL);
         userRegistration(name, email, password);
         loginUser(email, password);
